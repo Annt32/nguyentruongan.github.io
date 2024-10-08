@@ -1,6 +1,6 @@
-# Nguyễn Trương An - Giới Thiệu Bản Thân
+#Giới Thiệu Bản Thân
 
-Xin chào! Đây là trang giới thiệu của tôi - Nguyễn Trương An. Tôi là một sinh viên đam mê lập trình và công nghệ, đặc biệt là AI và phát triển phần mềm.
+Xin chào! Đây là trang giới thiệu của tôi. Tôi là một sinh viên đam mê lập trình và công nghệ, đặc biệt là AI và phát triển phần mềm.
 
 ## Nội dung trang web
 Trang web này được tạo ra nhằm giới thiệu về bản thân tôi, các kỹ năng tôi đã học được và các dự án mà tôi đã thực hiện. Trang bao gồm các phần:
