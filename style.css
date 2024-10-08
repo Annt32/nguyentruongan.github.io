@@ -1,15 +1,214 @@
+/* Cấu trúc tổng thể */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    overflow: hidden; /* Ẩn thanh cuộn mặc định của trang */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth; /* Kéo mượt */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Ẩn thanh cuộn */
+}
+
+/* Phần bên trái (Sidebar) */
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    background-color: #222121bd;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
     text-align: center;
-    padding: 50px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Arial', sans-serif;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #fff;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.username {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.status {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.btn.edit-profile {
+    background-color: #292929;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn.edit-profile:hover {
+    background-color: #444;
+}
+
+.contact-info {
+    text-align: left;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+.contact-info a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #00ffcc;
+}
+
+/* Font Awesome Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+
+/* Sở Thích và Kỹ Năng */
+ul {
+    list-style-type: none; /* Xóa ký hiệu dấu chấm của danh sách */
+    padding: 0;
+}
+
+.social-links a {
+    display: block;
+    margin: 15px 0;
+    color: #1e90ff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #00ffcc;
+}
+
+/* Phần bên phải (Main Content) */
+.main-content {
+    margin-left: 320px;
+    padding: 40px;
+    width: calc(100% - 300px);
+    background-color: #1a1a1a;
+    height: 100vh;
+    overflow-y: scroll; /* Chỉ cuộn nội dung */
+    -webkit-overflow-scrolling: touch; /* Mượt mà cho thiết bị di động */
+    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+}
+
+/* Ẩn thanh cuộn trên Chrome, Safari và Edge */
+.main-content::-webkit-scrollbar {
+    display: none;
 }
 
 h1 {
-    color: #333;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 p {
     font-size: 18px;
-    color: #666;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+ul li {
+    margin-bottom: 5px; /* Tạo khoảng cách 10px giữa các phần tử */
+}
+
+/* Animation */
+
+.profile-img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+.social-links a {
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #ff6347; /* Màu khi hover */
+}
+
+
+/* Nút */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #1e90ff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #00ffcc;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
 }
